@@ -52,3 +52,7 @@ This project facilitates IoT manufacturers in gathering data about their device 
 4. **Data Update**
    - Registered devices send data updates to the Gateway server.
    - Information is stored in the respective company's NoSQL database.
+
+## Development Status
+
+The project is still in development, focusing on the integration between the website and the Gateway server, as well as building the HTTP server unit.
