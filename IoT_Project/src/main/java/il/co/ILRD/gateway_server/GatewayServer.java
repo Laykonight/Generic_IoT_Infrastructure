@@ -31,8 +31,6 @@ public class GatewayServer {
     private final RequestHandler requestHandler; // inplace
     private final PlugAndPlay PnP; // out source
     private final Factory<String, JSONObject> factory; // out source
-//    private final DB_ManagerCRUD DBManagerCRUD;
-//    private final AdminCRUD adminCRUD;
     private final int TCPPort;
     private final int UDPPort;
 //    private String pnpDirPath;
@@ -123,11 +121,6 @@ public class GatewayServer {
 
         /*====================================================================================================*/
         /*================================================ API Commands ======================================*/
-        // todo hierarchy check
-        // key = 'registerCompany' -> value = '@companyName'
-        // key = 'registerProduct' -> value = '@companyName@productName'
-        // key = 'registerIoT' -> value = '@companyName@productName@IoTSerial'
-        // key = 'update' -> value = '@companyName@productName@IoTSerial@update'
         private void addDefaultCommands() {
             /*
             request{
@@ -363,7 +356,6 @@ public class GatewayServer {
                 String test = requestHandler.byteBufferToString(byteBuffer);
                 System.out.println(test);
 
-//                System.out.println("\nMessageManager.handle");// todo remove
                 if (null == byteBuffer) {
                     return;
                 }
